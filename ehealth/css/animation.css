@@ -1,0 +1,9 @@
+
+.sections img {
+	transition: opacity 0.4s;
+}
+
+.sections img:hover {
+	opacity: 1;
+	cursor: pointer;
+}

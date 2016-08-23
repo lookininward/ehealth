@@ -1,0 +1,194 @@
+html,
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+  font-family: 'Josefin Sans', sans-serif;
+
+}
+
+/* NAVIGATION */
+ul.main-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 20px;
+  overflow: hidden;
+  background-color: #3F5167;
+  text-align: center;
+/*  border-top: 3px solid rgba(193,159,96,1);
+  border-bottom: 3px solid rgba(193,159,96,1);*/
+}
+
+ul.main-nav li {
+	display: inline-block;
+}
+
+ul.main-nav li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
+
+  width:140px;
+}
+
+ul.main-nav li a:hover {
+/*	background-color: #555;*/
+	background-color: rgba(193,159,96,1);
+}
+
+ul.main-nav li.icon {
+	display: none;
+}
+
+@media screen and (max-width:680px) {
+  ul.main-nav li:not(:first-child) {display: none;}
+  ul.main-nav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:680px) {
+  ul.main-nav.responsive {position: relative;}
+  ul.main-nav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.main-nav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.main-nav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
+
+
+
+/*  JUMBOTRON */
+.jumbotron {
+  margin-bottom: 0%;
+  background: url(../img/emergency.jpeg) no-repeat;
+  background-size: cover;
+  height: 600px;
+  position: relative;
+  -webkit-filter: grayscale(0.5);
+  filter: grayscale(0.5);
+  opacity: 1;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+
+/*  transition: opacity;
+  transition-duration: 0.6s;*/
+}
+
+.page-header {
+  text-align: center;
+  color: black;
+  padding: 3%;
+  margin-top: 5%;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+
+}
+
+.page-header h1 {
+  font-size: 90px;
+  font-weight: 700;
+  overflow: hidden; /*fix with media query */
+}
+
+.sections {
+  padding: 1% 10% 5% 10%;
+  background-color: #ECEFF1;
+}
+
+.sections h2 {
+  text-align: center;
+}
+
+.sections img {
+  opacity: 0.7;
+}
+
+.what-we-do {
+  margin-bottom: 0%;
+  background: url(../img/emergency.jpeg) no-repeat;
+  background-size: cover;
+  height: 400px;
+  position: relative;
+  -webkit-filter: grayscale(0.5);
+  filter: grayscale(0.5);
+  opacity: 1;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+
+/*  transition: opacity;
+  transition-duration: 0.6s;*/
+}
+
+.what-we-do-header {
+  text-align: center;
+  color: black;
+  padding: 3%;
+  margin-top: 5%;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+
+}
+
+.what-we-do-header h1 {
+  font-size: 90px;
+  font-weight: 700;
+  overflow: hidden; /*fix with media query */
+}
+
+
+.about {
+  padding: 1% 10% 5% 10%;
+  background-color: #ECEFF1;
+}
+
+.about h2 {
+  text-align: center;
+}
+
+.about img {
+  opacity: 0.7;
+}
+
+#map {
+  width: 100%;
+  height: 400px;
+  filter:grayscale(90%);
+  -webkit-filter:grayscale(90%);
+}
+
+
+.footer {
+  background-color: #3F5167;
+  color: white;
+  padding: 3% 5% 5% 5%;
+}
+
+.footer p {
+  font-size: 18px;
+}
+
+.footer ul {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 18px;
+}
