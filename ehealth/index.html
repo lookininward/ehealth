@@ -4,30 +4,57 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/animation.css" rel="stylesheet">
-
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery-3.1.0.min.js"></script>
+	<script src="js/jquery.mixitup.min.js"></script>
 	<script src="http://maps.googleapis.com/maps/api/js"></script>
+	
+	<script type="text/javascript">
+	$(function () {
+		
+		var filterList = {
+		
+			init: function () {
+			
+				// MixItUp plugin
+				// http://mixitup.io
+				$('#portfoliolist').mixItUp({
+  				selectors: {
+    			  target: '.portfolio',
+    			  filter: '.filter'	
+    		  },
+    		  load: {
+      		  filter: '.cphie, .mi'  
+      		}     
+				});								
+			
+			}
+
+		};
+		
+		// Run the show!
+		filterList.init();
+		
+		
+	});	
+	</script>
 
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-
 	<title>Home | Centre for Global eHealth Innovation</title>
 </head>
 
-<body>
+<body data-spy="scroll" data-target="nav">
 
 <!-- NAVIGATION -->
 <nav>
-	<ul class="main-nav" id="nav">
+	<ul class="main-nav" id="nav" role="tablist">
 		<li style="margin-right:25px;"><img src="img/logo.png"></li>
-		<li><a href="#">About Us</a></li>
-		<li><a href="#">What We Do</a></li>
-		<li><a href="#">People</a></li>
-		<li><a href="#">Opportunities</a></li>
+		<li><a href="#history">History</a></li>
+		<li><a href="#achievement">Achievements</a></li>
+		<li><a href="#project">Projects</a></li>
 		<li><a href="#">Blog</a></li>
 		<li class="icon">
 			<a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
@@ -87,20 +114,48 @@
 	</div>
 </div>
 
-<!-- About Us -->
-<div class="container-fluid">
-	<div class="row about">
-		<div class="col-md-2"></div>
-		<div class="col-md-8">
+<!-- History -->
+<div class="container-fluid" id="history">
+	<div class="row history">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
 			<h1>History</h1>
-			<h2>We are a group of people whose common vision and passion it is to improve health for all using information and communication technologies. Touched by the broad spectrum of players that can elicit changes in health, we work tirelessly with multi-disciplinary and international leaders from the social sciences, technology and health fields to transform health systems around the globe.</h2>		
+			<h2>We are a group of people whose common vision and passion it is to improve health for all using information and communication technologies. Touched by the broad spectrum of players that can elicit changes in health, we work tirelessly with multi-disciplinary and international leaders from the social sciences, technology and health fields to transform health systems around the globe.</h2>
+			<img src="http://ehealthinnovation.org/wp-content/themes/eHealth/images/imgAboutHistory.png" class="img-responsive" style="width:40%;float:right;margin:-2% 0 2% 0;">		
 			<h2>The brainchild of Dr. Alex Jadad, the Centre was born from the collaboration of a diverse group of researchers and scientists from the University Health Network (UHN) and the University of Toronto and established through the support of a $2.2 million dollar grant from the Canada Foundation for Innovation.</h2>
 			<h2>This was the idea that inspired a diverse group of people to join forces and attempt something different.</h2>
 			<h2>A 15,000 square foot space at UHN was renovated and designated as the Centre's new home. When the doors first opened, the Centre's mandate was to "innovate, not just for us, but for the world" and housed but twenty scientists, researchers, consultants and collaborators. The Centre started with four initiatives that primarily focused on how the Internet could be used by patients and clinicians to improve arthritis management and cancer care.</h2>
+			<img src="http://ehealthinnovation.org/wp-content/themes/eHealth/images/imgAboutAchievements.png" class="img-responsive" style="width:40%;float:left;margin:2% 4% 0 0;">	
 			<h2>Today, the Centre has grown to accommodate over 70 innovators who focus on a broad range of subjects including healthcare safety, healthcare human factors, personal health information, health equity and</h2>
 			<h2>The fast-paced world of health technologies will continue to impact care and change the way we do things. Through it all, the Centre will remain true to its original mandate and continue to question and critique technological innovations, not just for us, but for the world.</h2>
+		</div>
+		<div class="col-md-1"></div>
+	</div>
+</div>
 
+<!-- What We Do -->
+<div class="container-fluid">
+	<div class="row what-we-do">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+			<div class="what-we-do-header">
+				<h2>Touched by the broad spectrum of players that can elicit changes in health, we work tirelessly with multi-disciplinary and international leaders from the social sciences, technology and health fields to transform health systems around the globe.</h2>
+			</div>
+			<p></p>
+		</div>
+		<div class="col-md-1"></div>
+	</div>
+</div>
+
+<!-- Achievements -->
+<div class="container-fluid achievements" id="achievement">
+	<div class="row">
+		<div class="col-md-12">
 			<h1>Achievements</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 side-a">
 			<h2>Nov 2012 World Congress People’s Choice Award, Bant Diabetes App</h2>
 			<p>We were very excited that our Bant app was nominated in the list of Top 10 World Congress mHealth Innovation Entrepreneurs. Being awarded the People’s Choice Award at the event in the face of such innovative and cutting-edge competition was an unexpected surprise which has left us thrilled and motivated to continue our efforts towards impactful mHealth research.</p>
 
@@ -109,7 +164,8 @@
 
 			<h2>Nov 2010 Excellence in Canadian Telehealth, Canada’s Health Informatics Association (COACH)</h2>
 			<p>The UHN Telehealth Program was awarded significant contribution to Telehealth in Canada. This prestigious award was received by Dr. Peter Rossos and Dr. Joseph Cafazzo, on behalf of the Telehealth Program and the Personal Health Information Technology Group, at the 6th Annual COACH Award Gala. The Program’s many successes include serving as the pilot site for Ontario Telemedicine Network projects, including desktop videoconferencing and personal telemedicine pilots.</p>
-
+		</div>
+		<div class="col-md-6 side-b">
 			<h2>July 2011 FICCDAT, Best Scientific Paper Award</h2>
 			<p>Nathaniel Hamming was awarded the overall Best Scientific Paper at the 34th Annual Canadian Medical & Biological Engineering Society Conference. His submission was entitled: Automatic Image-to-World Registration Based on X-Ray Projections in Cone-Beam CT, authored by Nathaniel Hamming, Michael Daly, Jeffrey Siewrdsen and Jonathan Irish. This year’s conference event was held as part of the Festival of International Conferences on Caregiving, Disability, Aging and Technology (FICCDAT). The Academic Program boasted great sessions on the latest biomedical engineering research.</p>
 
@@ -118,27 +174,149 @@
 
 			<h2>Sept 2011 Stanford Medicine 2.0 Award</h2>
 			<p>Mark Casselman was awarded for his demo-presentation of bant: A Mobile Phone-Based Self Management System for Adolescents with Type I Diabetes at the 2011 Stanford Med 2.0 Congress. This Best Demo Presentation award was presented to Mark by Dr. Larry Chu, Chair of the Stanford Med 2.0 Organizing Committee.</p>
-
-			<h1>Labs</h1>
-			<p>The most sophisticated laboratories of their kind allow our team to evaluate, iterate, and improve. Part of the University Health Network, and adjacent to the University of Toronto, the Centre provides unrivaled access to subjects, facilities, and professionals.</p>
-			<p>To request a tour, or to get informed about booking our lab space, please email us at info@ehealthinnovation.org</p>
-
-			<h2>Simulation & Usability Labs</h2>
-			<p>The simulation labs provide theatre-style spaces that can be configured to meet your particular needs. They work independently, or can be combined to offer a total of 2000 square feet of space. These labs are particularly useful for analyzing complex interactions between related environments.</p>
-
-			<h2>Observation Rooms</h2>
-			<p>These rooms are equipped with touch screen control panels so that you can easily manage the technology; including pan-tilt- zoom cameras, audio recordings, and screen captures. Testing sessions are discretely directed and monitored from the observation rooms thanks to the one-way mirrors and integrated communication system.</p>
-
-			<h2>Teleconference Room</h2>
-			<p>Use this technologically sophisticated space to engage in activities ranging from secure consultations to open interactions with the general public. This room is ideal for meetings or small focus groups that need to be recorded for further study. The teleconference room can also function as another fully-equipped simulation & usability lab.</p>
-
-			<h2>Floor Plan</h2>
-			<p>Our labs allow for high-fidelity simulations of clinical environments and scenarios, and are equipped with sophisticated recording equipment for archiving, analyzing and sharing data. The usability labs can simulate health-related settings, allowing rigorous testing and rapid improvement of medical devices before they are introduced into real environments.</p>
-
-			<img src="http://ehealthinnovation.org/wp-content/uploads/imgLabsFloorPlan.jpg">
-
 		</div>
-		<div class="col-md-2"></div>
+	</div>
+</div>
+
+<!-- Projects -->
+<div class="tiles projects" id="project">
+	<h1>Projects</h1>
+	<ul id="filters" class="clearfix">
+		<li><span class="filter active" data-filter=".cphie, .mi">All</span></li>
+		<li><span class="filter" data-filter=".cphie">CPHIe</span></li>
+		<li><span class="filter" data-filter=".mi">MI</span></li>
+	</ul>
+
+	<div id="portfoliolist">
+		<div class="portfolio mi" data-cat="mi">
+			<div class="portfolio-wrapper">				
+				<img src="img/portfolios/logo/5.jpg" alt="" />
+				<div class="label">
+					<div class="label-text">
+						<a class="text-title">EVIDAAC</a>
+<!-- 						<span class="text-category">MI</span> -->
+					</div>
+					<div class="label-bg"></div>
+				</div>
+			</div>
+		</div>				
+
+		<div class="portfolio cphie" data-cat="cphie">
+			<div class="portfolio-wrapper">			
+				<img src="img/portfolios/app/1.jpg" alt="" />
+				<div class="label">
+					<div class="label-text">
+						<a class="text-title">Visual Infography</a>
+<!-- 						<span class="text-category">CPHIe</span> -->
+					</div>
+					<div class="label-bg"></div>
+				</div>
+			</div>
+		</div>		
+					
+		<div class="portfolio cphie" data-cat="cphie">
+			<div class="portfolio-wrapper">
+				<img src="img/portfolios/app/3.jpg" alt="" />
+				<div class="label">
+					<div class="label-text">
+						<a class="text-title">Weatherette</a>
+<!-- 						<span class="text-category">CPHIe</span> -->
+					</div>
+					<div class="label-bg"></div>
+				</div>
+			</div>
+		</div>	
+		
+		<div class="portfolio mi" data-cat="mi">
+			<div class="portfolio-wrapper">			
+				<img src="img/portfolios/logo/1.jpg" alt="" />
+				<div class="label">
+					<div class="label-text">
+						<a class="text-title">KittyPic</a>
+<!-- 						<span class="text-category">MI</span> -->
+					</div>
+					<div class="label-bg"></div>
+				</div>
+			</div>
+		</div>																																							
+		
+		<div class="portfolio cphie" data-cat="cphie">
+			<div class="portfolio-wrapper">			
+				<img src="img/portfolios/app/2.jpg" alt="" />
+				<div class="label">
+					<div class="label-text">
+						<a class="text-title">Graph Plotting</a>
+<!-- 						<span class="text-category">CPHIe</span> -->
+					</div>
+					<div class="label-bg"></div>
+				</div>
+			</div>
+		</div>			
+
+		<div class="portfolio mi" data-cat="mi">
+			<div class="portfolio-wrapper">			
+				<img src="img/portfolios/logo/6.jpg" alt="" />
+				<div class="label">
+					<div class="label-text">
+						<a class="text-title">Mobi Sock</a>
+<!-- 						<span class="text-category">MI</span> -->
+					</div>
+					<div class="label-bg"></div>
+				</div>
+			</div>
+		</div>																	
+
+		<div class="portfolio mi" data-cat="mi">
+			<div class="portfolio-wrapper">			
+				<img src="img/portfolios/logo/7.jpg" alt="" />
+				<div class="label">
+					<div class="label-text">
+						<a class="text-title">Village Community Church</a>
+<!-- 						<span class="text-category">MI</span> -->
+					</div>
+					<div class="label-bg"></div>
+				</div>
+			</div>
+		</div>	
+
+		<div class="portfolio mi" data-cat="mi">
+			<div class="portfolio-wrapper">			
+				<img src="img/portfolios/logo/3.jpg" alt="" />
+				<div class="label">
+					<div class="label-text">
+						<a class="text-title">Native Designers</a>
+<!-- 						<span class="text-category">MI</span> -->
+					</div>
+					<div class="label-bg"></div>
+				</div>
+			</div>
+		</div>																	
+
+		<div class="portfolio mi" data-cat="mi">
+			<div class="portfolio-wrapper">			
+				<img src="img/portfolios/logo/4.jpg" alt="" />
+				<div class="label">
+					<div class="label-text">
+						<a class="text-title">Bookworm</a>
+<!-- 						<span class="text-category">MI</span> -->
+					</div>
+					<div class="label-bg"></div>
+				</div>
+			</div>
+		</div>																												
+
+		<div class="portfolio mi" data-cat="mi">
+			<div class="portfolio-wrapper">			
+				<img src="img/portfolios/logo/2.jpg" alt="" />
+				<div class="label">
+					<div class="label-text">
+						<a class="text-title">Speciallisterne</a>
+<!-- 						<span class="text-category">MI</span> -->
+					</div>
+					<div class="label-bg"></div>
+				</div>
+			</div>
+		</div>										
 	</div>
 </div>
 
@@ -148,16 +326,20 @@
 <!-- Footer -->
 <div class="container-fluid footer">
 	<div class="row">
-		<div class="col-md-3"></div>
-		<div class="col-md-3">
+		<div class="col-md-2"></div>
+		<div class="col-md-4">
 			<h2>Address</h2>
 			<p>Centre for Global eHealth Innovation<br>
 				Toronto General Hospital<br>
 				R. Fraser Elliott Building, 4th Floor
 			</p><br>
-			<p>The Centre for Global eHealth Innovation is located on the 4th Floor of the R. Fraser Elliott Building of the Toronto General Hospital, University Health Network. Our wing is only accessible from the Elliott (South) elevators.</p>
+			<p>The Centre for Global eHealth Innovation is located<br> 
+				on the 4th Floor of the R. Fraser Elliott Building of the<br>
+				Toronto General Hospital, University Health Network.<br> 
+				Our wing is only accessible from the Elliott (South)<br>
+				elevators.</p>
 		</div>
-		<div class="col-md-3">
+		<div class="col-md-4">
 			<h2>Contact</h2>
 			<ul>
 				<li>Email: info@ehealthinnovation.org</li>
@@ -165,7 +347,7 @@
 				<li>Fax: 416.340.3595</li>
 			</ul>
 		</div>
-		<div class="col-md-3"></div>
+		<div class="col-md-2"></div>
 	</div>
 </div>
 

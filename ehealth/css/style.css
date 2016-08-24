@@ -103,7 +103,7 @@ ul.main-nav li.icon {
 }
 
 .page-header h1 {
-  font-size: 90px;
+  font-size: 100px;
   font-weight: 700;
   overflow: hidden; /*fix with media query */
 }
@@ -155,21 +155,62 @@ ul.main-nav li.icon {
   overflow: hidden; /*fix with media query */
 }
 
+.history {
+  padding: 1% 6% 5% 10%;
+/*  background-color: #ECEFF1;
+*/  background-color: white;
+}
 
-.about {
-  padding: 1% 10% 5% 10%;
+.history h1 {
+  text-align: center;
+  font-size: 100px;
+  font-weight: bold;
+  text-decoration: underline;
+  margin: 4% 0 4% 0;
+}
+
+.history img {
+  opacity: 1;
+}
+
+.achievements {
+  padding: 1% 10% 2% 10%;
   background-color: #ECEFF1;
 }
 
-.about h2 {
+.achievements h1 {
   text-align: center;
+  font-size: 100px;
+  font-weight: bold;
+  text-decoration: underline;
+  margin: 4% 0 4% 0;
 }
 
-.about img {
-  opacity: 0.7;
+.achievements p {
+  font-size: 22px;
+  margin: 0 0 12% 0;
+}
+
+.achievements img {
+  opacity: 1;
+}
+
+.achievements .side-a {
+  padding: 0% 4% 1% 2%;
+}
+
+.achievements .side-b {
+  padding: 0% 2% 1% 4%;
+}
+
+.projects h1 {
+  font-size: 100px;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 #map {
+  margin-top: 5%;
   width: 100%;
   height: 400px;
   filter:grayscale(90%);
@@ -191,4 +232,240 @@ ul.main-nav li.icon {
   list-style-type: none;
   padding-left: 0;
   font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container { 
+  position: relative; 
+  margin: 0 auto; 
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;  
+}
+
+.tiles { 
+  position: relative; 
+  margin: 0 auto; 
+  padding: 1% 5% 0% 5%;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;  
+  height: 700px;
+}
+
+.tiles h1 {
+  text-align: center;
+}
+ 
+#filters {
+  margin:1% 1% 1% 1%;
+  padding: 1%;
+  list-style:none;
+  background-color: #3F5167;
+  width: 600px;
+  text-align: center;
+}
+
+#filters ul {
+  margin: 0;
+  padding: 0;
+  width: 500px;
+}
+
+#filters li {
+  display: inline;
+  float: left;
+  list-style: none;
+}
+  
+#filters li span {
+  display: block;
+  padding:5px 40px;   
+  text-decoration:none;
+  color:white;
+  cursor: pointer;
+}
+  
+#filters li span.active {
+  background-color: rgba(193,159,96,1);;
+}
+ 
+#filters li:hover {
+  background: red;
+  background-color: rgba(193,159,96,1);
+}
+
+
+#portfoliolist .portfolio {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  width:18%;
+  margin:0% 1% 1% 1%;
+  display:none;
+  float:left;
+  overflow:hidden;
+}
+
+.portfolio-wrapper {
+  overflow:hidden;
+  position: relative !important;
+  background: #666;
+  cursor:pointer;
+}
+
+.portfolio img {
+  max-width:100%;
+  position: relative;
+  top:0;
+  -webkit-transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);   
+  
+  -webkit-filter: grayscale(50%);
+  filter:grayscale(50%);
+}
+
+.portfolio img:hover {
+  -webkit-filter: grayscale(0%);
+  filter:grayscale(0%);
+}
+
+.portfolio .label {
+  position: absolute;
+  width: 100%;
+  height: 90px;
+  bottom:-40px;
+  -webkit-transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.portfolio .label-bg {
+  background-color: #3F5167;
+  width: 100%;
+  height:100%;
+  position: absolute;
+  top:0;
+  left:0;
+}
+
+.portfolio .label-text {
+  font-size: 22px;
+  position: relative;
+  z-index:500;
+  padding: 5px 8px 5px 5px;
+}
+
+.portfolio .text-category {
+  display:block;
+  font-size:16px;
+}
+
+.portfolio:hover .label {
+  bottom:0;
+
+}
+.portfolio:hover img {
+  top:-30px;
+}  
+
+.text-title {
+  color: white;
+  padding: 5%;
+}
+
+.text-title:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.label-text {
+  font-weight: 0;
+}
+/* #Tablet (Portrait) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .container {
+    width: 768px; 
+  }
+}
+
+
+/*  #Mobile (Portrait) - Note: Design for a width of 320px */
+@media only screen and (max-width: 767px) {
+  .container { 
+    width: 95%; 
+  }
+  
+  #portfoliolist .portfolio {
+    width:48%;
+    margin:1%;
+  }   
+
+  #ads {
+    display:none;
+  }
+  
+}
+
+
+/* #Mobile (Landscape) - Note: Design for a width of 480px */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .container {
+    width: 70%;
+  }
+  
+  #ads {
+    display:none;
+  }
+  
+}
+
+/* #Clearing */
+
+/* Self Clearing Goodness */
+.container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+.clearfix:before,
+.clearfix:after,
+.row:before,
+.row:after {
+  content: '\0020';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0; }
+.row:after,
+.clearfix:after {
+  clear: both; }
+.row,
+.clearfix {
+  zoom: 1; }
+
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+
+html {
+  overflow-y: scroll;
 }
