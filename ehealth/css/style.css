@@ -5,7 +5,6 @@ body {
 	margin: 0;
 	padding: 0;
   font-family: 'Josefin Sans', sans-serif;
-
 }
 
 /* NAVIGATION */
@@ -16,7 +15,7 @@ ul.main-nav {
   overflow: hidden;
   background-color: #3F5167;
   text-align: center;
-/*  border-top: 3px solid rgba(193,159,96,1);
+/*border-top: 3px solid rgba(193,159,96,1);
   border-bottom: 3px solid rgba(193,159,96,1);*/
 }
 
@@ -32,7 +31,6 @@ ul.main-nav li a {
   text-decoration: none;
   transition: 0.3s;
   font-size: 17px;
-
   width:140px;
 }
 
@@ -70,9 +68,6 @@ ul.main-nav li.icon {
   }
 }
 
-
-
-
 /*  JUMBOTRON */
 .jumbotron {
   margin-bottom: 0%;
@@ -88,18 +83,16 @@ ul.main-nav li.icon {
   background-attachment: fixed;
   background-position: center;
 
-/*  transition: opacity;
+/*transition: opacity;
   transition-duration: 0.6s;*/
 }
 
 .page-header {
   text-align: center;
-  color: black;
   padding: 3%;
   margin-top: 5%;
   background: rgba(255, 255, 255, 0.4);
   border: none;
-
 }
 
 .page-header h1 {
@@ -108,6 +101,8 @@ ul.main-nav li.icon {
   overflow: hidden; /*fix with media query */
 }
 
+
+/* Sections */
 .sections {
   padding: 1% 10% 5% 10%;
   background-color: #ECEFF1;
@@ -121,6 +116,8 @@ ul.main-nav li.icon {
   opacity: 0.7;
 }
 
+
+/* What We Do */
 .what-we-do {
   margin-bottom: 0%;
   background: url(../img/emergency.jpeg) no-repeat;
@@ -155,6 +152,8 @@ ul.main-nav li.icon {
   overflow: hidden; /*fix with media query */
 }
 
+
+/* History */
 .history {
   padding: 1% 6% 5% 10%;
 /*  background-color: #ECEFF1;
@@ -173,6 +172,8 @@ ul.main-nav li.icon {
   opacity: 1;
 }
 
+
+/* Achievements */
 .achievements {
   padding: 1% 10% 2% 10%;
   background-color: #ECEFF1;
@@ -203,14 +204,19 @@ ul.main-nav li.icon {
   padding: 0% 2% 1% 4%;
 }
 
+
+/* Projects */
 .projects h1 {
   font-size: 100px;
   font-weight: bold;
   text-decoration: underline;
+  margin: 4% 0 4% 0;
 }
 
+
+/* Google Maps */
 #map {
-  margin-top: 5%;
+  margin-top: 300px;
   width: 100%;
   height: 400px;
   filter:grayscale(90%);
@@ -218,6 +224,7 @@ ul.main-nav li.icon {
 }
 
 
+/* Footer */
 .footer {
   background-color: #3F5167;
   color: white;
@@ -245,9 +252,7 @@ ul.main-nav li.icon {
 
 
 
-
-
-
+/* Filter Menu Projects */
 .container { 
   position: relative; 
   margin: 0 auto; 
@@ -255,6 +260,7 @@ ul.main-nav li.icon {
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
   transition: all 1s ease;  
+
 }
 
 .tiles { 
@@ -266,6 +272,7 @@ ul.main-nav li.icon {
   -o-transition: all 1s ease;
   transition: all 1s ease;  
   height: 700px;
+  text-align: center;
 }
 
 .tiles h1 {
@@ -278,19 +285,17 @@ ul.main-nav li.icon {
   list-style:none;
   background-color: #3F5167;
   width: 600px;
-  text-align: center;
 }
 
-#filters ul {
+.tiles #filters ul {
+  display: inline-block;
   margin: 0;
   padding: 0;
   width: 500px;
 }
 
-#filters li {
-  display: inline;
+.tiles #filters li {
   float: left;
-  list-style: none;
 }
   
 #filters li span {
@@ -310,7 +315,6 @@ ul.main-nav li.icon {
   background-color: rgba(193,159,96,1);
 }
 
-
 #portfoliolist .portfolio {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -320,6 +324,7 @@ ul.main-nav li.icon {
   display:none;
   float:left;
   overflow:hidden;
+  text-align: left;
 }
 
 .portfolio-wrapper {
@@ -335,7 +340,6 @@ ul.main-nav li.icon {
   top:0;
   -webkit-transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);   
-  
   -webkit-filter: grayscale(50%);
   filter:grayscale(50%);
 }
@@ -364,15 +368,14 @@ ul.main-nav li.icon {
 }
 
 .portfolio .label-text {
-  font-size: 22px;
+  font-size: 20px;
   position: relative;
   z-index:500;
-  padding: 5px 8px 5px 5px;
+  padding: 12px 0px 0px 0px;
 }
 
 .portfolio .text-category {
   display:block;
-  font-size:16px;
 }
 
 .portfolio:hover .label {
@@ -393,9 +396,6 @@ ul.main-nav li.icon {
   text-decoration: none;
 }
 
-.label-text {
-  font-weight: 0;
-}
 /* #Tablet (Portrait) */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   .container {
